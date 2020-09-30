@@ -7,5 +7,6 @@ Parses the call data that was used to make the transaction that created a new vo
 ## Instructions
 
 1. Clone the repo
-2. Copy paste the provided proposal specification file under `proposalSpecs/` with the file name `${PROPOSAL_NUMBER}.json`
-3. Run `PROPOSAL=${PROPOSAL_NUMBER} npm start` in the project root (e.g. `PROPOSAL=18 npm start`)
+1. Run `npm install` in the project root
+1. Copy paste the provided proposal specification file under `proposalSpecs/` with the file name `${PROPOSAL_NUMBER}.json`
+1. Run `PROPOSAL=${PROPOSAL_NUMBER} npm start` in the project root (e.g. `PROPOSAL=18 npm start`)
