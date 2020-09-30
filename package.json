@@ -1,0 +1,34 @@
+{
+  "name": "proposal-verifier",
+  "version": "1.0.0",
+  "description": "A tool to verify the specs of a proposal created through the Agent app of the DAO",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "prettify": "prettier --write \"./**/*.js\"",
+    "pretty-quick": "pretty-quick --staged --pattern \"**/*.*(js|ts)\"",
+    "start": "node index $PROPOSAL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/api3dao/proposal-verifier.git"
+  },
+  "dependencies": {
+    "@nomiclabs/buidler-ethers": "^2.0.0",
+    "@nomiclabs/buidler-waffle": "^2.1.0",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.1.1",
+    "ethers": "^5.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pretty-quick && npm run lint"
+    }
+  }
+}

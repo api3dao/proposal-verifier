@@ -1,0 +1,10 @@
+{
+  "proposalNo": "19",
+  "targetContractAddress": "0x6B3998970db68A9Cb7Ab240017C20D22F08A3cC1",
+  "targetFunction": "approve(address,uint256)",
+  "value": "0",
+  "parameters": [
+    "0x7B35bF1954a428B4C2fc04a253a2aa950CB96e6C",
+    "1000000000000000000"
+  ]
+}
