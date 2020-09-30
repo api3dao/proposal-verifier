@@ -71,7 +71,7 @@ async function verifyProposal() {
   )[0];
   // Verify the EVMScript spec ID
   expect(ethers.utils.hexDataSlice(evmScript2, 0, 0x4)).to.equal("0x00000001");
-  // Verify that the EVMScript targets the voting app
+  // Verify that the EVMScript targets the agent app
   expect(ethers.utils.hexDataSlice(evmScript2, 0x4, 0x4 + 0x14)).to.equal(
     agentAppAddress
   );
