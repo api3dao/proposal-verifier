@@ -1,14 +1,12 @@
 const ethers = require("ethers");
 const { expect } = require("chai");
 const { getFunctionSignature, getEventTopic } = require("./util.js");
-const provider = ethers.providers.getDefaultProvider("rinkeby");
-const proposalSpecs = require(`./proposalSpecs/${process.env.PROPOSAL}.json`);
-console.log(proposalSpecs);
+const provider = ethers.providers.getDefaultProvider("mainnet");
+const proposal = require(`./proposalSpecs/${process.env.PROPOSAL}.json`);
+console.log(proposal);
 
-// TODO: Update with mainnet addresses
-// DAO-specific parameters
-const votingAppAddress = "0x30af083b062bdf4d0bf067d28bd39091c7dd7af0";
-const agentAppAddress = "0x0c26bb185ad09c5a41e8fd127bf7b8c99e81e5dc";
+const votingAppAddress = "0x05811ad31cbd5905e4e1427482713e3fb04a4c05";
+const agentAppAddress = "0xe7af7c5982e073ac6525a34821fe1b3e8e432099";
 
 // Constants
 const forwardSignature = getFunctionSignature("forward(bytes)");
@@ -18,7 +16,7 @@ const startVoteTopic = getEventTopic("StartVote(uint256,address,string)");
 async function verifyProposal() {
   // Encode the proposal number
   const encodedProposalNo = ethers.utils.hexZeroPad(
-    ethers.utils.hexValue(ethers.BigNumber.from(proposalSpecs.proposalNo)),
+    ethers.utils.hexValue(ethers.BigNumber.from(proposal.specs.proposalNo)),
     32
   );
   // Find the respective log
@@ -95,23 +93,23 @@ async function verifyProposal() {
     ["address", "uint256", "bytes"],
     ethers.utils.hexDataSlice(callData2, 4)
   );
-  expect(parameters1[0]).to.equal(proposalSpecs.targetContractAddress);
+  expect(parameters1[0]).to.equal(proposal.specs.targetContractAddress);
   expect(
-    parameters1[1].eq(ethers.BigNumber.from(proposalSpecs.value))
+    parameters1[1].eq(ethers.BigNumber.from(proposal.specs.value))
   ).to.equal(true);
   const callData3 = parameters1[2];
   // ... and the third layer is peeled.
 
   const targetFunctionSignature = getFunctionSignature(
-    proposalSpecs.targetFunction
+    proposal.specs.targetFunction
   );
   expect(ethers.utils.hexDataSlice(callData3, 0, 0x4)).to.equal(
     targetFunctionSignature
   );
-  const targetFunctionArguments = proposalSpecs.targetFunction
+  const targetFunctionArguments = proposal.specs.targetFunction
     .substring(
-      proposalSpecs.targetFunction.indexOf("(") + 1,
-      proposalSpecs.targetFunction.indexOf(")")
+      proposal.specs.targetFunction.indexOf("(") + 1,
+      proposal.specs.targetFunction.indexOf(")")
     )
     .split(",");
   const parameters2 = ethers.utils.defaultAbiCoder.decode(
@@ -122,12 +120,12 @@ async function verifyProposal() {
     if (Array.isArray(parameter)) {
       for (const [indEntry, entry] of parameter.entries()) {
         expect(entry.toString()).to.equal(
-          proposalSpecs.parameters[indParameter][indEntry]
+          proposal.specs.parameters[indParameter][indEntry]
         );
       }
     } else {
       expect(parameter.toString()).to.equal(
-        proposalSpecs.parameters[indParameter]
+        proposal.specs.parameters[indParameter]
       );
     }
   }
