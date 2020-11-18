@@ -3,7 +3,7 @@ const { expect } = require("chai");
 const { getFunctionSignature, getEventTopic } = require("./util.js");
 const provider = ethers.providers.getDefaultProvider("mainnet");
 const proposal = require(`./proposalSpecs/${process.env.PROPOSAL}.json`);
-console.log(proposal);
+console.log(JSON.stringify(proposal, null, 2));
 
 const votingAppAddress = "0x05811ad31cbd5905e4e1427482713e3fb04a4c05";
 const agentAppAddress = "0xe7af7c5982e073ac6525a34821fe1b3e8e432099";
