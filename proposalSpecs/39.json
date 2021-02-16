@@ -1,5 +1,5 @@
 {
-  "description": "Approve 4045 * 5 / 6 API3 tokens to be timelocked for Pocket Network.",
+  "description": "Approve 4045 / 6 API3 tokens to be timelocked for Pocket Network.",
   "specs": {
     "proposalNo": "39",
     "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
