@@ -1,0 +1,12 @@
+{
+  "description": "Duplicate of 58, don't pass",
+  "specs": {
+    "proposalNo": "59",
+    "targetContractAddress": "0xFaef86994a37F1c8b2A5c73648F07dd4eFF02baA",
+    "targetFunction": "updateApi3Pool(address)",
+    "value": "0",
+    "parameters": [
+      "0x6dd655f10d4b9E242aE186D9050B68F725c76d76"
+    ]
+  }
+}
