@@ -1,0 +1,13 @@
+{
+  "description": "Reverts a timelock. The proposal is now redundant and unactable so you can ignore this.",
+  "specs": {
+    "proposalNo": "61",
+    "targetContractAddress": "0x32D228B5d44Fd18FefBfd68BfE5A5F3f75C873AE",
+    "targetFunction": "revertTimelock(address,address)",
+    "value": "0",
+    "parameters": [
+      "0xCE6210888560Fb210F20aCF683a2989619a1f4fB",
+      "0x439A2D8c08751aD4E8130c2585c7108FD3957f0C"
+    ]
+  }
+}
