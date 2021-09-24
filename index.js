@@ -1,7 +1,12 @@
 const ethers = require("ethers");
 const { expect } = require("chai");
-const provider = ethers.providers.getDefaultProvider("mainnet");
 const proposal = require(`./proposalSpecs/${process.env.PROPOSAL}.json`);
+
+const providerUrl = process.env.PROVIDER_URL;
+const provider = providerUrl
+  ? new ethers.providers.JsonRpcProvider(providerUrl)
+  : ethers.providers.getDefaultProvider("mainnet");
+
 console.log(JSON.stringify(proposal, null, 2));
 
 const votingAppAddress = "0x05811ad31cbd5905e4e1427482713e3fb04a4c05";
