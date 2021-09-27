@@ -14,9 +14,14 @@ Parses the call data that was used to make the transaction that created a new vo
 ## Troubleshooting
 
 - The default `ethers` provider may sometimes rate limit you.
-In that case, replace the provider with your own, for example:
-```js
-const provider = new ethers.providers.JsonRpcProvider("https://mainnet.infura.io/v3/<YOUR_INFURA_KEY>");
+
+In that case, replace the provider with your own by using an environment variable:
+```sh
+# Export for the current shell session
+export PROVIDER_URL=https://mainnet.infura.io/v3/<YOUR_INFURA_KEY>
+
+# Alternatively, use as part of npm start
+PROVIDER_URL=https://mainnet.infura.io/v3/<YOUR_INFURA_KEY> PROPOSAL=18 npm run start
 ```
 
 - Make sure that the adresses in the proposal specs are mixed-case for checksum.
