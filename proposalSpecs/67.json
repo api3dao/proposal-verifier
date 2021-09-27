@@ -1,5 +1,5 @@
 {
-  "description": "Approve ~3.5 million API3 tokens to be timelocked (ignore #65).",
+  "description": "Approve ~3.5 million API3 tokens to be timelocked.",
   "specs": {
     "proposalNo": "67",
     "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
