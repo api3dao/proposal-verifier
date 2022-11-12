@@ -1,0 +1,13 @@
+{
+  "description": "Approve 1 million API3 tokens to be irreovacbly timelockable at the newly deployed contract",
+  "specs": {
+    "proposalNo": "73",
+    "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "targetFunction": "approve(address,uint256)",
+    "value": "0",
+    "parameters": [
+      "0x0DfE2c661d50Ab2424A53297c679eAeB57DbB944",
+      "1000000000000000000000000"
+    ]
+  }
+}
