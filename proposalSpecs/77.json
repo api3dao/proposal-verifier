@@ -1,0 +1,13 @@
+{
+  "description": "Transfer 1 API3 to the primary agent of authoritative DAO.",
+  "specs": {
+    "proposalNo": "77",
+    "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "targetFunction": "transfer(address,uint256)",
+    "value": "0",
+    "parameters": [
+      "0xD9F80Bdb37E6Bad114D747E60cE6d2aaF26704Ae",
+      "1000000000000000000"
+    ]
+  }
+}
