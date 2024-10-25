@@ -1,0 +1,13 @@
+{
+  "description": "(Faulty, do not vote yes) Transfer 1.5M+ API3 to the secondary agent of authoritative DAO.",
+  "specs": {
+    "proposalNo": "79",
+    "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "targetFunction": "transfer(address,uint256)",
+    "value": "0",
+    "parameters": [
+      "0x556ECbb0311D350491Ba0EC7E019c354D7723CE0",
+      "1547987000000000000000000"
+    ]
+  }
+}

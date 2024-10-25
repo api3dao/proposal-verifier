@@ -1,0 +1,12 @@
+{
+  "description": "Transfer Api3Token ownership to the primary agent of authoritative DAO.",
+  "specs": {
+    "proposalNo": "81",
+    "targetContractAddress": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
+    "targetFunction": "transferOwnership(address)",
+    "value": "0",
+    "parameters": [
+      "0xD9F80Bdb37E6Bad114D747E60cE6d2aaF26704Ae"
+    ]
+  }
+}
