@@ -17,7 +17,7 @@
     "@nomiclabs/buidler-ethers": "^2.0.0",
     "@nomiclabs/buidler-waffle": "^2.1.0",
     "chai": "^4.2.0",
-    "ethereum-waffle": "^3.1.1",
+    "ethereum-waffle": "^4.0.10",
     "ethers": "^5.0.14"
   },
   "devDependencies": {
